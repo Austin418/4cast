@@ -1,5 +1,8 @@
-.navbar-brand {
-    img {
+div{
+    border:solid black
+}
+.navbar-brand{
+    img{
         width: 75px;
         height: 75px;
     }
@@ -8,7 +11,4 @@
 .navbar-nav li a{
     font-size: 1.5rem;
     margin: 0 5vw;
-}
-.search-button{
-    background-color: $orange-200;
 }
