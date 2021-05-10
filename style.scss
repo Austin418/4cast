@@ -1,7 +1,31 @@
-div{
-    border:solid black
-.navbar-brand{
-    img{
+div.container {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    div.row{
+        .ad{
+            border-right: solid black;
+            #first-col{
+                border-top: black solid;
+            }
+            #last-col{
+                border-bottom: solid black;
+            }
+        }
+        .info{
+            border: black solid;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+    }
+    img {
+        float: left;
+        margin-right: 1rem;
+    }
+}
+.navbar-brand {
+    img {
         width: 75px;
         height: 75px;
     }
