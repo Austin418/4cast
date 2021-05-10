@@ -1,6 +1,10 @@
 {
     "version": 3,
+<<<<<<< HEAD
     "mappings": "AAAA,AAAA,GAAG,AAAA,CACC,MAAM,CAAC,WACX,CAAC",
+=======
+    "mappings": "AAAA,AACI,aADS,CACT,GAAG,AAAA,CACC,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACf",
+>>>>>>> d24993592816a9d41e4a5bb89b9606565c254b21
     "sources": [
         "../../../style.scss"
     ],
