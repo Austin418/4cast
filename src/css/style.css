@@ -5,6 +5,11 @@ div.container {
   margin-right: 1rem;
 }
 
+div.container div.row {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 div.container div.row .ad {
   border-right: solid black;
 }
