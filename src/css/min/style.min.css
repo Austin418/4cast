@@ -1,6 +1,2 @@
-<<<<<<< HEAD
-.navbar-brand img{width:75px;height:75px}.navbar-nav li a{font-size:1.5rem;margin:0 5vw}.slogan{padding-left:10px}
-=======
-div.container{margin-left:1rem;margin-top:1rem;margin-bottom:1rem;margin-right:1rem}div.container div.row{margin-top:1rem;margin-bottom:1rem}div.container div.row .ad{border-right:solid black}div.container div.row .ad #first-col{border-top:black solid}div.container div.row .ad #last-col{border-bottom:solid black}div.container div.row .info{border:black solid;padding-top:0.5rem;padding-bottom:0.5rem}div.container img{float:left;margin-right:1rem}.navbar-brand img{width:75px;height:75px}.navbar-nav li a{font-size:1.5rem;margin:0 5vw}
->>>>>>> 6b1164e49b4120a03e7484f2e8b311958a10bf88
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{margin-bottom:0.5rem;font-family:roboto;font-weight:500;line-height:1.2;color:inherit}div.container{margin-left:1rem;margin-top:1rem;margin-bottom:1rem;margin-right:1rem}div.container div.row{margin-top:1rem;margin-bottom:1rem}div.container div.row .ad{border-right:solid black}div.container div.row .ad #first-col{border-top:black solid}div.container div.row .ad #last-col{border-bottom:solid black}div.container div.row .info{border:black solid;padding-top:0.5rem;padding-bottom:0.5rem}div.container img{float:left;margin-right:1rem}.navbar-brand img{width:75px;height:75px}.navbar-nav li a{font-size:1.5rem;margin:0 5vw}.slogan{padding-left:10px}
 /*# sourceMappingURL=style.min.css.map */
