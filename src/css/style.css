@@ -1,3 +1,41 @@
+<<<<<<< HEAD
+=======
+div.container {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+div.container div.row {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+div.container div.row .ad {
+  border-right: solid black;
+}
+
+div.container div.row .ad #first-col {
+  border-top: black solid;
+}
+
+div.container div.row .ad #last-col {
+  border-bottom: solid black;
+}
+
+div.container div.row .info {
+  border: black solid;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+div.container img {
+  float: left;
+  margin-right: 1rem;
+}
+
+>>>>>>> 6b1164e49b4120a03e7484f2e8b311958a10bf88
 .navbar-brand img {
   width: 75px;
   height: 75px;
