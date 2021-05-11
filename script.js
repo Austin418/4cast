@@ -1695,6 +1695,22 @@ const info = {
 }
 
 const { lat, lon, timezone, timezone_offset, current } = info
+const CNTER = document.getElementById("cc")
+const P = document.createElement("cur");
+const P1 = document.createElement("cur1");
+const P2 = document.createElement("cur2");
+const P3 = document.createElement("cur3");
+const P4 = document.createElement("cur4");
+P.innerHTML = "Latitude: " + lat + "<br>";
+P1.innerHTML = "Longitude: " + lon + "<br>";
+P2.innerHTML = "Timezone: " + timezone + "<br>";
+P3.innerHTML = "Timezone Offset: " + timezone_offset + "<br>";
+P4.innerHTML = "Current:" + "<br>" + "Data Type: " + current.dt;
+CNTER.appendChild(P);
+CNTER.appendChild(P1);
+CNTER.appendChild(P2);
+CNTER.appendChild(P3);
+CNTER.appendChild(P4);
 
-const H1 = document.getElementById("")
+
 console.log(info)
