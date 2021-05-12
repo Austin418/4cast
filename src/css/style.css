@@ -1,50 +1,36 @@
 #main {
-  background: url(../../media/sun-ray.jpg);
+  background: url(../../media/bigstock-Sun-Rays-On-Sunset-Sky-With-Bl-379334437.jpg);
   background-size: cover;
+  background-repeat: repeat;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
   line-height: 1.2;
   color: inherit;
 }
 
 a {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 div.container {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
+  margin: 10px auto;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30vw;
-      grid-template-columns: 30vw;
-  -ms-grid-rows: 30vh 30vh 30vh;
-      grid-template-rows: 30vh 30vh 30vh;
-}
-
-div.container .ad {
-  border-right: solid black;
-}
-
-div.container .ad #first-col {
-  border-top: black solid;
-}
-
-div.container .ad #last-col {
-  border-bottom: solid black;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
 }
 
 div.container .info {
+  width: 25vw;
   border: black solid 2px;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
   border-radius: 5px;
   background: #fff;
 }
@@ -52,6 +38,10 @@ div.container .info {
 div.container img {
   float: left;
   margin-right: 1rem;
+}
+
+nav {
+  position: absolute;
 }
 
 .navbar-brand img {
