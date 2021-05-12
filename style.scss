@@ -1,3 +1,8 @@
+#main{
+    background: url(../../media/sun-ray.jpg);
+    background-size: cover;
+}
+
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 margin-bottom: 0.5rem;
@@ -14,10 +19,11 @@ div.container {
     margin-left: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    margin-right: 1rem;
-    div.row {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+    margin-right: 1rem;    
+    display: grid;
+    grid-template-columns: 30vw;
+    grid-template-rows: 30vh 30vh 30vh;
+
         .ad {
             border-right: solid black;
             #first-col {
@@ -28,11 +34,12 @@ div.container {
             }
         }
         .info {
-            border: black solid;
+            border: black solid 2px;
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
+            border-radius: 5px;
+            background: #fff;
         }
-    }
     img {
         float: left;
         margin-right: 1rem;

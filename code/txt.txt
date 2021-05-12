@@ -1,0 +1,60 @@
+<div class="container">
+        <div class="row">
+            <div class="col col-sm-12 col-md-10 info" id = "cc">
+                <img href="https://i.ytimg.com/vi/RzGKAqEC2hg/maxresdefault.jpg" width="50rem" height="50rem">
+                
+                
+            </div>
+            <div class="col-sm-0 col-md-2 d-xs-none d-sm-none d-md-block ad" id="first-col">
+                <p>ad</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-10 info" id = "cc1">
+                <img href="https://i.ytimg.com/vi/RzGKAqEC2hg/maxresdefault.jpg" width="50rem" height="50rem">
+                
+            </div>
+            <div class="col-sm-0 col-md-2 d-xs-none d-sm-none d-md-block ad">
+                <p>ad</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-10 info" id = "cc2">
+                <img href="https://i.ytimg.com/vi/RzGKAqEC2hg/maxresdefault.jpg" width="50rem" height="50rem">
+                
+            </div>
+            <div class="col-sm-0 col-md-2 d-xs-none d-sm-none d-md-block ad" id="last-col">
+                <p>ad</p>
+            </div>
+        </div>
+    </div>
+
+
+    //style
+
+    div.row {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        
+        .ad {
+            border-right: solid black;
+            #first-col {
+                border-top: black solid;
+            }
+            #last-col {
+                border-bottom: solid black;
+            }
+        }
+        .info {
+            border: black solid;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-radius: 15px;
+            background-color: rgba(100, 216, 237, 0.342);
+        }
+    }
+    img {
+        float: left;
+        margin-right: 1rem;
+    }
+}

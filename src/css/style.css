@@ -1,3 +1,8 @@
+#main {
+  background: url(../../media/sun-ray.jpg);
+  background-size: cover;
+}
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -16,29 +21,32 @@ div.container {
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-right: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30vw;
+      grid-template-columns: 30vw;
+  -ms-grid-rows: 30vh 30vh 30vh;
+      grid-template-rows: 30vh 30vh 30vh;
 }
 
-div.container div.row {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-div.container div.row .ad {
+div.container .ad {
   border-right: solid black;
 }
 
-div.container div.row .ad #first-col {
+div.container .ad #first-col {
   border-top: black solid;
 }
 
-div.container div.row .ad #last-col {
+div.container .ad #last-col {
   border-bottom: solid black;
 }
 
-div.container div.row .info {
-  border: black solid;
+div.container .info {
+  border: black solid 2px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  border-radius: 5px;
+  background: #fff;
 }
 
 div.container img {
