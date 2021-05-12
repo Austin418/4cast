@@ -1699,15 +1699,15 @@ current.weather = current.weather[0];
 const CNTER = document.getElementById("cc")
 const CNTER1 = document.getElementById("cc1")
 const CNTER2 = document.getElementById("cc2")
-const P = document.createElement("p");
-const P1 = document.createElement("p");
-const P2 = document.createElement("p");
-const P3 = document.createElement("p");
+const P = document.createElement("h2");
+const P1 = document.createElement("h2");
+const P2 = document.createElement("h2");
+const P3 = document.createElement("h2");
 const P4 = document.createElement("p");
 const P5 = document.createElement("p");
 const P6 = document.createElement("p");
-const P7 = document.createElement("p");
-const P8 = document.createElement("p");
+const P7 = document.createElement("h1");
+const P8 = document.createElement("h3");
 const P9 = document.createElement("p");
 const P10 = document.createElement("p");
 const P11 = document.createElement("p");
@@ -1724,23 +1724,22 @@ P.innerHTML = "Latitude: " + lat + "<br>";
 P1.innerHTML = "Longitude: " + lon + "<br>";
 P2.innerHTML = "Timezone: " + timezone + "<br>";
 P3.innerHTML = "Timezone Offset: " + timezone_offset + "<br>";
-P4.innerHTML = "Data Type: " + current.dt + "<br>";
-P5.innerHTML = "Sunrise: " + current.sunrise + "<br>"
-P6.innerHTML = "Sunset: " + current.sunset + "<br>";
-P7.innerHTML = "Temperature: " + current.temp + "<br>";
-P8.innerHTML = "Feels Like: " + current.feels_like + "<br>";
+
+
+P7.innerHTML = `${current.temp}${String.fromCharCode(176)} F <br>`;
+P8.innerHTML = `Feels Like: ${current.feels_like}${String.fromCharCode(176)} F`
 P9.innerHTML = "Pressure: " + current.pressure + "<br>";
 P10.innerHTML = "Humidity: " + current.humidity + "<br>";
 P11.innerHTML = "Dew Point: " + current.dew_point + "<br>";
 P12.innerHTML = "UVI: " + current.uvi + "<br>";
 P13.innerHTML = "Clouds: " + current.clouds + "<br>";
 P14.innerHTML = "Visibility: " + current.visibility + "<br>";
-P15.innerHTML = "Wind Speed: " + current.wind_speed + "<br>";
-P16.innerHTML = "Wind Degree: " + current.wind_deg + "<br>";
-P17.innerHTML = "ID: " + current.weather.id + "<br>";
-P18.innerHTML = "Main: " + current.weather.main + "<br>";
+P15.innerHTML = "Wind Speed: " + current.wind_speed + " mph" +  "<br>";
+P16.innerHTML = "Wind Degree: " + current.wind_deg + String.fromCharCode(176) + "<br>";
+
+
 P19.innerHTML = "Description: " + current.weather.description + "<br>";
-P20.innerHTML = "Icon: " + current.weather.icon + "<br>";
+
 CNTER.appendChild(P);
 CNTER.appendChild(P1);
 CNTER.appendChild(P2);
@@ -1752,7 +1751,7 @@ CNTER1.appendChild(P7);
 CNTER1.appendChild(P8);
 CNTER1.appendChild(P9);
 CNTER1.appendChild(P10);
-CNTER.appendChild(P11);
+CNTER1.appendChild(P11);
 CNTER2.appendChild(P12);
 CNTER2.appendChild(P13);
 CNTER2.appendChild(P14);
@@ -1760,7 +1759,7 @@ CNTER2.appendChild(P15);
 CNTER2.appendChild(P16);
 CNTER.appendChild(P17);
 CNTER.appendChild(P18);
-CNTER.appendChild(P19);
+CNTER1.appendChild(P19);
 CNTER.appendChild(P20);
 
 
