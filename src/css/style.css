@@ -18,6 +18,7 @@ a {
 }
 
 div.container {
+  background: #ffbb3c;
   margin: 10px auto;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: -ms-grid;
@@ -27,16 +28,30 @@ div.container {
   -ms-grid-rows: 25vw 25vw 25vw;
       grid-template-rows: 25vw 25vw 25vw;
   gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 div.container .info {
   width: 25vw;
   height: 25vw;
-  border: black solid 2px;
+  border: white 2px solid;
   padding: 0.5rem;
   border-radius: 5px;
   background: #fff;
   margin: auto;
+}
+
+div.container .info img {
+  margin: 10px;
+  width: 75px;
+  height: 75px;
 }
 
 div.container .largeTile {
@@ -47,12 +62,11 @@ div.container .largeTile {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
-  background: #ffb834;
+  background: #ffdc9c;
   display: block;
   margin: auto;
   height: 25vw;
   border-radius: 5px;
-  border: black solid 2px;
 }
 
 div.container .ad3 {
@@ -74,7 +88,6 @@ div.container .ad2 {
 }
 
 .info {
-  border: black solid 2px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 5px;
@@ -83,7 +96,7 @@ div.container .ad2 {
 
 img {
   float: left;
-  margin-right: 1rem;
+  margin-left: 37.5px;
 }
 
 nav {
@@ -102,5 +115,72 @@ nav {
 
 .slogan {
   padding-left: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    scroll-behavior: smooth;
+  }
+  #nav {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  div.container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 95vw;
+        grid-template-columns: 95vw;
+    -ms-grid-rows: 85vw 85vw 85vw;
+        grid-template-rows: 85vw 85vw 85vw;
+    gap: 5px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10px auto;
+  }
+  div.container h1 {
+    color: burlywood;
+    font-size: 4em;
+  }
+  div.container div#cc1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  div.container div#cc1 h3 {
+    color: cornflowerblue;
+    font-size: 2rem;
+  }
+  div.container .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    width: 85vw;
+    height: 85vw;
+    background-color: #bde0fe;
+  }
+  div.container .info p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.4rem;
+  }
+  div.container .largeTile {
+    display: none;
+  }
+  div.container .ad {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

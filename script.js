@@ -1720,10 +1720,10 @@ const P17 = document.createElement("p");
 const P18 = document.createElement("p");
 const P19 = document.createElement("p");
 const P20 = document.createElement("p");
-P.innerHTML = "Latitude: " + lat + "<br>";
-P1.innerHTML = "Longitude: " + lon + "<br>";
-P2.innerHTML = "Timezone: " + timezone + "<br>";
-P3.innerHTML = "Timezone Offset: " + timezone_offset + "<br>";
+P.innerHTML = "Latitude " + lat + "<br>";
+P1.innerHTML = "Longitude " + lon + "<br>";
+P2.innerHTML = "Timezone " + timezone + "<br>";
+P3.innerHTML = "Timezone Offset " + timezone_offset + "<br>";
 
 
 P7.innerHTML = `${current.temp}${String.fromCharCode(176)} F <br>`;
