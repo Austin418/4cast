@@ -2,6 +2,7 @@
     background: url(../../media/bigstock-Sun-Rays-On-Sunset-Sky-With-Bl-379334437.jpg);
     background-size: cover;
     background-repeat: repeat;
+    background-attachment: fixed;
 }
 
 
@@ -19,22 +20,56 @@ div.container {
     margin: 10px auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 25vw 25vw 25vw;
+    grid-template-rows: 25vw 25vw 25vw;
+    gap: 10px;
         .info {
             width: 25vw;
+            height: 25vw;
             border: black solid 2px;
             padding: 0.5rem;
             border-radius: 5px;
             background: #fff;
+            margin: auto;
         }
+        .largeTile{
+            width: 75vw;
+            grid-row: 2/3;
+            grid-column: 1/4;
+            background: rgb(255, 184, 52);
+            display: block;
+            margin: auto;
+            height: 25vw;
+            border-radius: 5px;
+            border: black solid 2px;
+
+        }
+        .ad3{
+            width: 25vw;
+            height: 25vw;
+            background: url(../../media/nintendo-switch-display-ad.jpg);
+            background-position: center;
+            background-size: contain;
+            border-radius: 5px;
+        }
+        .ad2{
+            background: url(../../media/YouTube-Ad_Featured-Image.png);
+            width: 25vw;
+            height: 25vw;
+            background-position: center;
+            background-size: contain;
+            border-radius: 5px;
+        }
+        
     img {
         float: left;
         margin-right: 1rem;
     }
 }
+
 nav{
     position: absolute;
+    
 }
 .navbar-brand {
     img {
