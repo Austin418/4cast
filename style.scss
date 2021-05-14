@@ -61,11 +61,22 @@ div.container {
             border-radius: 5px;
         }
         
+    }
+    .info {
+        border: black solid 2px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 5px;
+        background: #fff;
+    }
     img {
         float: left;
         margin-right: 1rem;
     }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> eb0a0efad1a05a203682321b170e712a5f506946
 
 nav{
     position: absolute;
@@ -84,6 +95,7 @@ nav{
     }
 
 
-.slogan{
+.slogan {
     padding-left: 10px;
 }
+
