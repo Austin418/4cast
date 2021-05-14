@@ -1695,11 +1695,9 @@ const info = {
   }
   
   const { lat, lon, timezone, timezone_offset, minutely} = info
+  const min1 = minutely[0]; 
+  const pres1 = min1[1]
 
-  for(i = 0; i++; minutely.length){
-    const P = document.createElement("h2");
-    
-  }
 
   const CNTER = document.getElementById("cc")
   const CNTER1 = document.getElementById("cc1")
@@ -1725,7 +1723,7 @@ const info = {
   // const P18 = document.createElement("p");
   // const P19 = document.createElement("p");
   // const P20 = document.createElement("p");
-  // P.innerHTML = "precipitation" + precipitation
+  P.innerHTML = "Precipitation " + pres1;
   // P1.innerHTML =
   // P2.innerHTML =
   // P3.innerHTML =
