@@ -3,6 +3,7 @@
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
+    
 }
 
 
@@ -31,7 +32,7 @@ div.container {
         .info {
             width: 25vw;
             height: 25vw;
-            border: white 2px solid;
+            border: black 1px solid;
             padding: 0.5rem;
             border-radius: 5px;
             background: #fff;
@@ -51,6 +52,7 @@ div.container {
             margin: auto;
             height: 25vw;
             border-radius: 5px;
+            border: 1px solid black;
 
         }
         .ad3{
@@ -119,6 +121,8 @@ nav{
         justify-content: space-around;
         align-items: center;
         margin: 10px auto;
+        background: none;
+        
         h1{
             color: burlywood;
             font-size: 4em;
