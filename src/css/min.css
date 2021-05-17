@@ -41,4 +41,25 @@
 .slogan {
   padding-left: 10px;
 }
+
+.border {
+  border: 1px solid black;
+}
+
+.row {
+  text-align: center;
+}
+
+h1 {
+  display: block;
+  margin: auto;
+}
+
+svg {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 30px;
+  height: 30px;
+}
 /*# sourceMappingURL=min.css.map */
