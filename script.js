@@ -1694,7 +1694,7 @@ const info = {
   ]
 }
 
-const { lat, lon, timezone, timezone_offset, current} = info
+const { lat, lon, timezone, timezone_offset, current } = info
 current.weather = current.weather[0];
 const CNTER = document.getElementById("cc")
 const CNTER1 = document.getElementById("cc1")
@@ -1734,7 +1734,7 @@ P11.innerHTML = "Dew Point: " + current.dew_point + "<br>";
 P12.innerHTML = "UVI: " + current.uvi + "<br>";
 P13.innerHTML = "Clouds: " + current.clouds + "<br>";
 P14.innerHTML = "Visibility: " + current.visibility + "<br>";
-P15.innerHTML = "Wind Speed: " + current.wind_speed + " mph" +  "<br>";
+P15.innerHTML = "Wind Speed: " + current.wind_speed + " mph" + "<br>";
 P16.innerHTML = "Wind Degree: " + current.wind_deg + String.fromCharCode(176) + "<br>";
 
 
@@ -1765,3 +1765,27 @@ CNTER.appendChild(P20);
 
 
 console.log(info)
+
+
+
+let i = 0
+function backgroundChange() {
+  i++
+  let main = document.getElementById('main')
+  if (i == 2) {
+    main.style.background = 'url(media/bigstock-Sun-Rays-On-Sunset-Sky-With-Bl-379334437.jpg)'
+    main.style.backgroundSize = "cover"
+    main.style.backgroundAttachment = 'fixed'
+    console.log(i)
+  }
+  if (i == 1) {
+    main.style.background = '#0dcaf0'
+    console.log(i)
+  }
+  if (i == 3 || i == 0) {
+    main.style.background = 'black'
+    i = 0
+    console.log(i)
+  }
+  console.log(i)
+}

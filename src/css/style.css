@@ -41,7 +41,7 @@ div.container {
 div.container .info {
   width: 25vw;
   height: 25vw;
-  border: white 2px solid;
+  border: black 1px solid;
   padding: 0.5rem;
   border-radius: 5px;
   background: #fff;
@@ -67,6 +67,7 @@ div.container .largeTile {
   margin: auto;
   height: 25vw;
   border-radius: 5px;
+  border: 1px solid black;
 }
 
 div.container .ad3 {
@@ -139,6 +140,7 @@ nav {
         -ms-flex-align: center;
             align-items: center;
     margin: 10px auto;
+    background: none;
   }
   div.container h1 {
     color: burlywood;
