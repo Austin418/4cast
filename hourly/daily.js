@@ -1696,12 +1696,14 @@ const info = {
 
 let hrTemp = []
 let hrHumidity = [];
+let hrFeelsLike = [];
 const { hourly } = info
 
 for (let hour of hourly) {
   console.log(hour['temp'])
   hrTemp.push(hour.temp)
   hrHumidity.push(hour.humidity)
+  hrFeelsLike.push(hour.feels_like)
 }
 console.log(hrTemp)
 let hour = hourly.temp
@@ -1767,7 +1769,22 @@ var myChart = new Chart(ctx, {
           
         ],
         borderWidth: 2
-      }
+      },
+      {
+        label: 'Feels Like',
+        data: hrFeelsLike,
+        backgroundColor: [
+            
+            'rgba(255, 206, 86, 0.2)'
+            
+        ],
+        borderColor: [
+            
+            'rgba(255, 206, 86, 1)'
+            
+        ],
+        borderWidth: 1
+    }
     ]
   },
   options: {
