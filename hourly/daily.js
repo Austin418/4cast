@@ -1695,11 +1695,13 @@ const info = {
 }
 
 let hrTemp = []
+let hrHumidity = [];
 const { hourly } = info
 
 for (let hour of hourly) {
   console.log(hour['temp'])
   hrTemp.push(hour.temp)
+  hrHumidity.push(hour.humidity)
 }
 console.log(hrTemp)
 let hour = hourly.temp
@@ -1735,48 +1737,34 @@ var myChart = new Chart(ctx, {
     ],
     datasets: [
       {
-        label: '# of Votes',
+        label: 'Temperature',
         data: hrTemp,
         tension: 0.1,
         fill: false,
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)'
+          'rgba(255, 99, 132, 0.2)'
+          
         ],
         borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)'
+          'rgba(255, 99, 132, 1)'
+          
         ],
         borderWidth: 2
       },
       {
-        label: '# of Votes',
-        data: [2, 5, 6 ,7 ,8, 8, 4, 3, 3 , 45, 6],
+        label: 'Humidity',
+        data: hrHumidity,
         tension: 0.1,
         fill: false,
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)'
+          
+          'rgba(54, 162, 235, 0.2)'
+          
         ],
         borderColor: [
-          'rgba(255, 99, 132, 1)',
+         
           'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)'
+          
         ],
         borderWidth: 2
       }
