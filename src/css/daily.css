@@ -27,4 +27,24 @@ img {
   float: left;
   margin-right: 1rem;
 }
+
+#myChart {
+  width: 400px !important;
+  height: 400px !important;
+}
+
+.bob {
+  background-color: lightblue;
+  height: 3000px;
+}
+
+.navbar-brand img {
+  width: 75px;
+  height: 75px;
+}
+
+.navbar-nav li a {
+  font-size: 1.5rem;
+  margin: 0 5vw;
+}
 /*# sourceMappingURL=daily.css.map */
