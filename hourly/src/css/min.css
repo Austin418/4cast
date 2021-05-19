@@ -196,3 +196,12 @@ svg {
   }
 }
 /*# sourceMappingURL=min.css.map */
+
+.graphContainer{
+  background-color: #fff;
+  margin: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 10px 15px black;
+  
+}

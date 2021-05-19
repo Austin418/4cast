@@ -1697,7 +1697,7 @@ const info = {
 let hrTemp = []
 let hrHumidity = [];
 let hrFeelsLike = [];
-const { hourly } = info
+const { hourly, daily } = info
 
 for (let hour of hourly) {
   console.log(hour['temp'])
@@ -1847,3 +1847,19 @@ function slideBack(){
     'marginRight' : '20vw'
   })
 }
+
+let count = 1
+
+
+for(day of daily){
+
+  const HEAD = document.createElement("h1");
+  const CNTER = document.getElementById("box" + count);
+  HEAD.innerHTML = day.temp.day;
+  console.log(day.temp.day)
+  CNTER.appendChild(HEAD);
+  count++
+  
+}
+
+
