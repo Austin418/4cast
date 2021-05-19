@@ -1,3 +1,24 @@
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+body {
+    background: url(../../../media/sunset-sky-1464251934sde.jpg);
+    background-attachment: fixed;
+}
+header {
+    
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    width: 25vw;
+    background-color: blanchedalmond;
+}
+
 #Min {
     div.row {
         margin-top: 1rem;
@@ -63,4 +84,90 @@ svg {
 }
 .card {
     margin: 0, 0, 0, 0;
+}
+.wholeContainer {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 75px auto 75px;
+    grid-template-rows: 17vw;
+    margin: 25px 0;
+}
+.container {
+    overflow: visible;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    gap: 10px;
+    position: absolute;
+    padding: 0px;
+    right: auto;
+    .box {
+        width: 17vw;
+        height: 17vw;
+        border: 1px solid black;
+        padding: 0;
+        border-radius: 5px;
+        background-color: blanchedalmond;
+        padding: 10px;
+    }
+}
+.button {
+    background-color: #0dcaf0;
+    border-radius: 50%;
+    outline: none;
+    border: 0;
+    width: 60px;
+    height: 60px;
+    z-index: 20;
+    margin: auto;
+    justify-content: center;
+    opacity: 10%;
+    transition: all 0.5s ease-out;
+    &:hover {
+        opacity: 100%;
+    }
+}
+.forward {
+    grid-column: 3/4;
+}
+.back {
+    grid-column: 1/2;
+}
+
+// // for mobile
+// border: 1px solid black;
+//         border-right: 0px;
+//         border-left: 0px;
+
+// function to move postion left link graph on page to scroll
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        width: 90%;
+        .box {
+            width: 90%;
+            height: 46vh;
+            margin: auto;
+            justify-content: center;
+        }
+    }
+    #container{
+        position: absolute;
+        right: 15px;
+        left: 15px;
+    }
+    header {
+        margin-top: 10px;
+        width: 75vw;
+    }
+    .wholeContainer {
+        display: block;
+        button {
+            display: none;
+        }
+    }
+    .graphs {
+        display: none;
+    }
 }
