@@ -1696,3 +1696,16 @@ const info = {
   
 
 
+
+function slideForward(){
+  $('#container').animate({
+    'right' : '100vw',
+    'marginRight' : 0
+  })
+}
+function slideBack(){
+  $('#container').animate({
+    'right' : '0',
+    'marginRight' : '20vw'
+  })
+}
