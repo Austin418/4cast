@@ -1835,11 +1835,27 @@ const data = {
   ]
 }
 
-function slideForward(){
-  $('#container').animate({
-    'right' : '100vw',
-    'marginRight' : 0
-  })
+
+let i = 0
+function backgroundChange() {
+  i++
+  let main = document.getElementById('main')
+  if (i == 2) {
+    main.style.background = 'url(media/bigstock-Sun-Rays-On-Sunset-Sky-With-Bl-379334437.jpg)'
+    main.style.backgroundSize = "cover"
+    main.style.backgroundAttachment = 'fixed'
+    console.log(i)
+  }
+  if (i == 1) {
+    main.style.background = '#0dcaf0'
+    console.log(i)
+  }
+  if (i == 3 || i == 0) {
+    main.style.background = 'black'
+    i = 0
+    console.log(i)
+  }
+  console.log(i)
 }
 function slideBack(){
   $('#container').animate({

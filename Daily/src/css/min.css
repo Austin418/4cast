@@ -4,8 +4,10 @@ html {
 }
 
 body {
-  background: url(../../../media/sunset-sky-1464251934sde.jpg);
+  background: url(../../../media/bigstock-Sun-Rays-On-Sunset-Sky-With-Bl-379334437.jpg);
   background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 header {
@@ -13,11 +15,9 @@ header {
   margin: auto;
   margin-top: 25px;
   text-align: center;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-radius: 5px;
-  width: 25vw;
-  background-color: blanchedalmond;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  width: 30vw;
 }
 
 #Min div.row {
@@ -111,7 +111,7 @@ svg {
   display: grid;
   -ms-grid-columns: auto auto auto auto auto auto auto auto auto auto;
       grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
-  gap: 10px;
+  gap: 20px;
   position: absolute;
   padding: 0px;
   right: auto;
@@ -122,13 +122,20 @@ svg {
   height: 17vw;
   border: 1px solid black;
   padding: 0;
-  border-radius: 5px;
-  background-color: blanchedalmond;
+  border-radius: 2px;
+  background-color: #4dd5ff;
+  opacity: .7;
   padding: 10px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.container .box:hover {
+  opacity: 1;
 }
 
 .button {
-  background-color: #0dcaf0;
+  background-color: #f0b30d;
   border-radius: 50%;
   outline: none;
   border: 0;
@@ -178,8 +185,8 @@ svg {
   }
   #container {
     position: absolute;
-    right: 15px;
-    left: 15px;
+    right: 0px;
+    left: 0px;
   }
   header {
     margin-top: 10px;
