@@ -1,26 +1,36 @@
-#main{
+#main {
     background: url(../../media/bigstock-Sun-Rays-On-Sunset-Sky-With-Bl-379334437.jpg);
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
-    
 }
 
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-margin-bottom: 0.5rem;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-font-weight: 500;
-line-height: 1.2;
-color: inherit;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-bottom: 0.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
 }
-a{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+a {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 div.container {
     background: rgb(255, 187, 60);
     margin: 10px auto;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     display: grid;
     grid-template-columns: 25vw 25vw 25vw;
     grid-template-rows: 25vw 25vw 25vw;
@@ -29,61 +39,59 @@ div.container {
     justify-content: center;
     padding: 20px;
     border-radius: 5px;
-        .info {
-            width: 25vw;
-            height: 25vw;
-            border: black 1px solid;
-            padding: 0.5rem;
-            border-radius: 5px;
-            background: #fff;
-            margin: auto;
-            img{
-                margin: 10px;
-                width: 75px;
-                height: 75px;
-            }
-        }
-        .largeTile{
-            width: 75vw;
-            grid-row: 2/3;
-            grid-column: 1/4;
-            background: rgb(255, 220, 156);
-            display: block;
-            margin: auto;
-            height: 25vw;
-            border-radius: 5px;
-            border: 1px solid black;
-
-        }
-        .ad3{
-            width: 25vw;
-            height: 25vw;
-            background: url(../../media/nintendo-switch-display-ad.jpg);
-            background-position: center;
-            background-size: contain;
-            border-radius: 5px;
-        }
-        .ad2{
-            background: url(../../media/YouTube-Ad_Featured-Image.png);
-            width: 25vw;
-            height: 25vw;
-            background-position: center;
-            background-size: contain;
-            border-radius: 5px;
-        }
-        
-    }
+    max-width: 85vw;
     .info {
-        
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+        width: 25vw;
+        height: 25vw;
+        border: black 1px solid;
+        padding: 0.5rem;
         border-radius: 5px;
         background: #fff;
+        margin: auto;
+        img {
+            margin: 10px;
+            width: 75px;
+            height: 75px;
+        }
     }
-    img {
-        float: left;
-        margin-left: 37.5px;
+    .largeTile {
+        width: 76vw;
+        grid-row: 2/3;
+        grid-column: 1/4;
+        background: rgb(255, 220, 156);
+        display: block;
+        margin: auto;
+        height: 25vw;
+        border-radius: 5px;
+        border: 1px solid black;
     }
+    .ad3 {
+        width: 25vw;
+        height: 25vw;
+        background: url(../../media/nintendo-switch-display-ad.jpg);
+        background-position: center;
+        background-size: contain;
+        border-radius: 5px;
+    }
+    .ad2 {
+        background: url(../../media/YouTube-Ad_Featured-Image.png);
+        width: 25vw;
+        height: 25vw;
+        background-position: center;
+        background-size: contain;
+        border-radius: 5px;
+    }
+}
+.info {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 5px;
+    background: #fff;
+}
+img {
+    float: left;
+    margin-left: 37.5px;
+}
 
 .navbar-brand {
     img {
@@ -95,42 +103,40 @@ div.container {
 .navbar-nav li a {
     font-size: 1.5rem;
     margin: 0 5vw;
-    }
-
+}
 
 .slogan {
     padding-left: 10px;
 }
 
 @media screen and (max-width: 900px) {
-    body{
+    body {
         scroll-behavior: smooth;
     }
-    #nav{
+    #nav {
         position: sticky;
     }
-    div.container{
+    div.container {
         display: grid;
-        grid-template-columns: 95vw;
+        grid-template-columns: auto;
         grid-template-rows: 85vw 85vw 85vw;
         gap: 5px;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         margin: 10px auto;
-        background: none;
-        
-        h1{
+        min-width: 90vw;
+        h1 {
             color: burlywood;
             font-size: 4em;
         }
-        div#cc1{
+        div#cc1 {
             grid-row: 1/2;
-            h3{
+            h3 {
                 color: cornflowerblue;
                 font-size: 2rem;
             }
         }
-        .info{
+        .info {
             display: flex;
             flex-wrap: wrap;
             flex-basis: auto;
@@ -139,15 +145,15 @@ div.container {
             width: 85vw;
             height: 85vw;
             background-color: #bde0fe;
-            p{
+            p {
                 display: flex;
                 font-size: 1.4rem;
             }
         }
-        .largeTile{
+        .largeTile {
             display: none;
         }
-        .ad{
+        .ad {
             display: none;
         }
     }

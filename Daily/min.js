@@ -1709,3 +1709,27 @@ function slideBack(){
     'marginRight' : '20vw'
   })
 }
+
+
+
+let i = 0
+function backgroundChange() {
+  i++
+  let main = document.getElementById('main')
+  if (i == 2) {
+    main.style.background = 'url(../media/bigstock-Sun-Rays-On-Sunset-Sky-With-Bl-379334437.jpg)'
+    main.style.backgroundSize = "cover"
+    main.style.backgroundAttachment = 'fixed'
+    console.log(i)
+  }
+  if (i == 1) {
+    main.style.background = 'url(../media/sunset-sky-1464251934sde.jpg'
+    console.log(i)
+  }
+  if (i == 3 || i == 0) {
+    main.style.background = 'black'
+    i = 0
+    console.log(i)
+  }
+  console.log(i)
+}
