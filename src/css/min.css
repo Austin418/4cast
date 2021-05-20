@@ -101,22 +101,33 @@ svg {
   overflow: visible;
   grid-column: 2/3;
   display: grid;
+<<<<<<< HEAD
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+=======
+  -ms-grid-columns: auto auto auto auto auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+>>>>>>> 99894d584a8d534e9ffc98ed07cfa3a5072c72dc
   gap: 20px;
   position: absolute;
   padding: 0px;
   right: auto;
+  -webkit-transition: ease-in-out all .5s;
+  transition: ease-in-out all .5s;
 }
 
 .container .box {
-  width: 17vw;
-  height: 17vw;
+  width: 20vw;
+  height: 20vw;
   border: 1px solid black;
   padding: 0;
   border-radius: 2px;
   background-color: #4dd5ff;
   opacity: .7;
   padding: 10px;
+<<<<<<< HEAD
+=======
+  -webkit-transition: all .3s ease-in-out;
+>>>>>>> 99894d584a8d534e9ffc98ed07cfa3a5072c72dc
   transition: all .3s ease-in-out;
 }
 
@@ -180,5 +191,14 @@ svg {
   .graphs {
     display: none;
   }
+}
+
+.graphContainer {
+  background-color: rgba(241, 243, 244, 0.836);
+  margin: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 15px black;
+          box-shadow: 10px 15px black;
 }
 /*# sourceMappingURL=min.css.map */

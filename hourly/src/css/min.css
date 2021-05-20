@@ -125,6 +125,8 @@ svg {
   border-radius: 5px;
   background-color: blanchedalmond;
   padding: 10px;
+  user-select: none;
+  cursor: pointer;
 }
 
 .button {
@@ -172,9 +174,12 @@ svg {
     width: 90%;
     height: 46vh;
     margin: auto;
+    user-select: none;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+
+
   }
   #container {
     position: absolute;
@@ -206,4 +211,6 @@ svg {
   box-shadow: 10px 15px black;
   
 }
+
+
 
