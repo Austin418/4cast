@@ -1,3 +1,5 @@
+
+
 const info = {
     lat: 33.53,
     lon: -112.18,
@@ -1694,42 +1696,91 @@ const info = {
     ]
   }
   
-
-
-
-function slideForward(){
-  $('#container').animate({
-    'right' : '100vw',
-    'marginRight' : 0
-  })
-}
-function slideBack(){
-  $('#container').animate({
-    'right' : '0',
-    'marginRight' : '20vw'
-  })
-}
-
-
-
-let i = 0
-function backgroundChange() {
-  i++
-  let main = document.getElementById('main')
-  if (i == 2) {
-    main.style.background = 'url(../media/bigstock-Sun-Rays-On-Sunset-Sky-With-Bl-379334437.jpg)'
-    main.style.backgroundSize = "cover"
-    main.style.backgroundAttachment = 'fixed'
-    console.log(i)
+  let hrTemp = []
+  let hrHumidity = [];
+  let hrFeelsLike = [];
+  const { hourly, daily } = info
+  
+  for (let hour of hourly) {
+    console.log(hour['temp'])
+    hrTemp.push(hour.temp)
+    hrHumidity.push(hour.humidity)
+    hrFeelsLike.push(hour.feels_like)
   }
-  if (i == 1) {
-    main.style.background = 'url(../media/sunset-sky-1464251934sde.jpg'
-    console.log(i)
+  console.log(hrTemp)
+  let hour = hourly.temp
+  
+  function slideForward(){
+    $('#container').animate({
+      'right' : '100vw',
+      'marginRight' : 0
+    })
   }
-  if (i == 3 || i == 0) {
-    main.style.background = 'black'
-    i = 0
-    console.log(i)
+  function slideBack(){
+    $('#container').animate({
+      'right' : '0',
+      'marginRight' : '20vw'
+    })
   }
-  console.log(i)
+  
+  let count = 1
+  let tempdata = [1, 2, 3]
+  
+  var ctx = document.getElementById('myChart').getContext('2d')
+  
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ['Highs', 'Lows', 'Feels Like'],
+          datasets: [{
+              label: '# of Votes',
+              data: tempdata,
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)'
+                  
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+  for(day of daily){
+      
+    const HEAD = document.createElement("h1");
+    const HEAD1 = document.createElement("h1");
+    const CNTER = document.getElementById("box" + count);
+    HEAD.innerHTML = "Day: " + day.temp.day + String.fromCharCode(176);
+    HEAD1.innerHTML = "Night: " + day.temp.night + String.fromCharCode(176);
+    CNTER.setAttribute('day', day.temp.day)
+    console.log(day.temp.day)
+    CNTER.appendChild(HEAD);
+    CNTER.appendChild(HEAD1);
+    CNTER.addEventListener('mouseenter', (e) => {
+        tempdata = []
+
+        
+        console.log(e.target.getAttribute('day'))
+        tempdata.push(e.target.getAttribute('day') + 3)
+        tempdata.push(e.target.getAttribute('day'))
+        tempdata.push(e.target.getAttribute('day') - 10)
+        myChart.update();
+        
+        
+        console.log(tempdata)
+    })
+    count++
+    
 }
