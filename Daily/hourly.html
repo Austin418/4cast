@@ -57,21 +57,40 @@
     <h1 class='text-warning'>Your 7 Day Forecast</h1>
   </header>
   <div class="wholeContainer">
-    <div id="container">
-      <div class="box box1">Weather data</div>
-      <div class="box box2">Weather data</div>
-      <div class="box box3">Weather data</div>
-      <div class="box box4">Weather data</div>
-      <div class="box box5">Weather data</div>
-      <div class="box box6">Weather data</div>
-      <div class="box box7">Weather data</div>
+    <div class="container" id="container">
+      <div class="box box1" id = "box1">Monday
+        <div class = "hbox" id="hbox1"></div>
+      </div>
+      <div class="box box2" id = "box2">Tuesday
+        <div class = "hbox" id="hbox2"></div>
+      </div>
+      <div class="box box3" id = "box3">Wednesday
+        <div class = "hbox" id="hbox3"></div>
+      </div>
+      <div class="box box4" id = "box4">Thursday
+        <div class = "hbox" id="hbox4"></div>
+      </div>
+      <div class="box box5" id = "box5">Friday
+        <div class = "hbox" id="hbox5"></div>
+      </div>
+      <div class="box box6" id = "box6">Saturday
+        <div class = "hbox" id="hbox6"></div>
+      </div>
+      <div class="box box7" id = "box7">Sunday
+        <div class = "hbox" id="hbox7"></div>
+      </div>
     </div>
+  </div>
+
+  <div class="graphContainer">
+    <canvas class="chart" id="myChart" width="400"  height="200"></canvas>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
     crossorigin="anonymous"></script>
   <script src="min.js"></script>
+  <script src="../node_modules/chart.js/dist/chart.js"></script>
   <script src='https://code.jquery.com/jquery-3.5.1.js' integrity='sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc='
     crossorigin='anonymous'></script>
 </body>
