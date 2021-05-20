@@ -102,9 +102,10 @@ svg {
     position: absolute;
     padding: 0px;
     right: auto;
+    transition: ease-in-out all .5s;
     .box {
-        width: 17vw;
-        height: 17vw;
+        width: 20vw;
+        height: 20vw;
         border: 1px solid black;
         
         padding: 0;

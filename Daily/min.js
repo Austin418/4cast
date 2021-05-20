@@ -1706,7 +1706,6 @@ function slideForward(){
 function slideBack(){
   $('#container').animate({
     'right' : '0',
-    'marginRight' : '20vw'
   })
 }
 
