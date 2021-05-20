@@ -1744,7 +1744,7 @@ for (day of daily) {
   console.log(day.temp.day)
   CNTER.appendChild(HEAD);
   CNTER.appendChild(HEAD1);
-  CNTER.addEventListener('mouseenter', (e) => {
+  CNTER.addEventListener('click', (e) => {
     tempdata = []
     console.log(e.target.getAttribute('day'))
     tempdata.push(e.target.getAttribute('day'))
