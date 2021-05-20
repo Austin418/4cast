@@ -198,7 +198,7 @@ svg {
 /*# sourceMappingURL=min.css.map */
 
 .graphContainer{
-  background-color: #fff;
+  background-color: rgba(241, 243, 244, 1);
   margin: 40px;
   padding: 10px;
   border-radius: 5px;

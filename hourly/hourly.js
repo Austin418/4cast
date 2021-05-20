@@ -1725,61 +1725,67 @@ const info = {
   
   let count = 1
   let tempdata = [1, 2, 3]
+
   
-  var ctx = document.getElementById('myChart').getContext('2d')
   
-  var myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-          labels: ['Highs', 'Lows', 'Feels Like'],
-          datasets: [{
-              label: '# of Votes',
-              data: tempdata,
-              backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(255, 206, 86, 0.2)'
-                  
-              ],
-              borderColor: [
-                  'rgba(255, 99, 132, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)'
-              ],
-              borderWidth: 1
-          }]
-      },
-      options: {
-          scales: {
-              y: {
-                  beginAtZero: true
-              }
-          }
-      }
-  });
   for(day of daily){
-      
+    
     const HEAD = document.createElement("h1");
     const HEAD1 = document.createElement("h1");
     const CNTER = document.getElementById("box" + count);
     HEAD.innerHTML = "Day: " + day.temp.day + String.fromCharCode(176);
     HEAD1.innerHTML = "Night: " + day.temp.night + String.fromCharCode(176);
-    CNTER.setAttribute('day', day.temp.day)
+    CNTER.setAttribute('day', day.temp.max)
+    CNTER.setAttribute('min', day.temp.min)
+    CNTER.setAttribute('feel', day.feels_like.day)
     console.log(day.temp.day)
     CNTER.appendChild(HEAD);
     CNTER.appendChild(HEAD1);
     CNTER.addEventListener('mouseenter', (e) => {
-        tempdata = []
-
-        
-        console.log(e.target.getAttribute('day'))
-        tempdata.push(e.target.getAttribute('day') + 3)
-        tempdata.push(e.target.getAttribute('day'))
-        tempdata.push(e.target.getAttribute('day') - 10)
-        myChart.update();
-        
-        
-        console.log(tempdata)
+      tempdata = []
+      console.log(e.target.getAttribute('day'))
+      tempdata.push(e.target.getAttribute('day'))
+      tempdata.push(e.target.getAttribute('min'))
+      tempdata.push(e.target.getAttribute('feel'))
+      
+      
+      
+      $("canvas#myChart").remove();
+      $("div.graphContainer").append('<canvas class="chart" id="myChart" width="400"  height="200"></canvas>');
+      var ctx = document.getElementById('myChart').getContext('2d')
+      
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Highs', 'Lows', 'Feels Like'],
+          datasets: [{
+            label: 'Temperatures',
+            data: tempdata,
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)'
+              
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+      
+      myChart.clear();
+      console.log(tempdata)
     })
     count++
     
