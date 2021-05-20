@@ -80,9 +80,7 @@ h1 {
 }
 
 svg {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   width: 30px;
   height: 30px;
 }
@@ -92,25 +90,23 @@ svg {
 }
 
 .wholeContainer {
-  display: -ms-grid;
   display: grid;
   width: 100vw;
-  -ms-grid-columns: 75px auto 75px;
-      grid-template-columns: 75px auto 75px;
-  -ms-grid-rows: 17vw;
-      grid-template-rows: 17vw;
+  grid-template-columns: 75px auto 75px;
+  grid-template-rows: 17vw;
   margin: 25px 0;
 }
 
 .container {
   overflow: visible;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
   grid-column: 2/3;
-  display: -ms-grid;
   display: grid;
+<<<<<<< HEAD
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+=======
   -ms-grid-columns: auto auto auto auto auto auto auto auto auto auto;
       grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+>>>>>>> 99894d584a8d534e9ffc98ed07cfa3a5072c72dc
   gap: 20px;
   position: absolute;
   padding: 0px;
@@ -128,7 +124,10 @@ svg {
   background-color: #4dd5ff;
   opacity: .7;
   padding: 10px;
+<<<<<<< HEAD
+=======
   -webkit-transition: all .3s ease-in-out;
+>>>>>>> 99894d584a8d534e9ffc98ed07cfa3a5072c72dc
   transition: all .3s ease-in-out;
 }
 
@@ -145,11 +144,8 @@ svg {
   height: 60px;
   z-index: 20;
   margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   opacity: 10%;
-  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 
@@ -158,32 +154,24 @@ svg {
 }
 
 .forward {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
   grid-column: 3/4;
 }
 
 .back {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
   grid-column: 1/2;
 }
 
 @media screen and (max-width: 900px) {
   .container {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     width: 90%;
   }
   .container .box {
     width: 90%;
     height: 46vh;
     margin: auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   #container {
     position: absolute;
