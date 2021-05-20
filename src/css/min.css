@@ -4,8 +4,10 @@ html {
 }
 
 body {
-  background: url(../../../media/sunset-sky-1464251934sde.jpg);
+  background: url(../../../media/bigstock-Sun-Rays-On-Sunset-Sky-With-Bl-379334437.jpg);
   background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 header {
@@ -13,11 +15,9 @@ header {
   margin: auto;
   margin-top: 25px;
   text-align: center;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-radius: 5px;
-  width: 25vw;
-  background-color: blanchedalmond;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  width: 30vw;
 }
 
 #Min div.row {
@@ -80,9 +80,7 @@ h1 {
 }
 
 svg {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   width: 30px;
   height: 30px;
 }
@@ -92,26 +90,19 @@ svg {
 }
 
 .wholeContainer {
-  display: -ms-grid;
   display: grid;
   width: 100vw;
-  -ms-grid-columns: 75px auto 75px;
-      grid-template-columns: 75px auto 75px;
-  -ms-grid-rows: 17vw;
-      grid-template-rows: 17vw;
+  grid-template-columns: 75px auto 75px;
+  grid-template-rows: 17vw;
   margin: 25px 0;
 }
 
 .container {
   overflow: visible;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
   grid-column: 2/3;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto auto auto auto auto auto auto;
-      grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
-  gap: 10px;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  gap: 20px;
   position: absolute;
   padding: 0px;
   right: auto;
@@ -122,13 +113,19 @@ svg {
   height: 17vw;
   border: 1px solid black;
   padding: 0;
-  border-radius: 5px;
-  background-color: blanchedalmond;
+  border-radius: 2px;
+  background-color: #4dd5ff;
+  opacity: .7;
   padding: 10px;
+  transition: all .3s ease-in-out;
+}
+
+.container .box:hover {
+  opacity: 1;
 }
 
 .button {
-  background-color: #0dcaf0;
+  background-color: #f0b30d;
   border-radius: 50%;
   outline: none;
   border: 0;
@@ -136,11 +133,8 @@ svg {
   height: 60px;
   z-index: 20;
   margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   opacity: 10%;
-  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 
@@ -149,37 +143,29 @@ svg {
 }
 
 .forward {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
   grid-column: 3/4;
 }
 
 .back {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
   grid-column: 1/2;
 }
 
 @media screen and (max-width: 900px) {
   .container {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     width: 90%;
   }
   .container .box {
     width: 90%;
     height: 46vh;
     margin: auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   #container {
     position: absolute;
-    right: 15px;
-    left: 15px;
+    right: 0px;
+    left: 0px;
   }
   header {
     margin-top: 10px;
