@@ -1,6 +1,6 @@
 html {
+    width: 100%;
     height: 100%;
-    overflow-x: hidden;
 }
 body {
     background: url(../../../media/bigstock-Sun-Rays-On-Sunset-Sky-With-Bl-379334437.jpg);
@@ -9,7 +9,6 @@ body {
     background-size: cover;
 }
 header {
-    
     display: block;
     margin: auto;
     margin-top: 25px;
@@ -17,7 +16,6 @@ header {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     width: 30vw;
-    
 }
 
 #Min {
@@ -77,71 +75,46 @@ h1 {
     display: block;
     margin: auto;
 }
-
-svg {
-    align-self: center;
-    width: 30px;
-    height: 30px;
+::-webkit-scrollbar {
+    color: transparent;
 }
-.card {
-    margin: 0, 0, 0, 0;
+::-webkit-scrollbar-thumb {
+    color: grey;
 }
 .wholeContainer {
-    display: grid;
-    width: 100vw;
-    grid-template-columns: 75px auto 75px;
-    grid-template-rows: 17vw;
-    margin: 25px 0;
-}
-.container {
-    overflow: visible;
-    grid-column: 2/3;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
-    gap: 20px;
-    position: absolute;
-    padding: 0px;
-    right: auto;
-    transition: ease-in-out all .5s;
-    .box {
-        width: 20vw;
-        height: 20vw;
-        border: 1px solid black;
-        
-        padding: 0;
-        border-radius: 2px;
-        background-color: rgb(77, 213, 255);
-        opacity: .7;
-        padding: 10px;
-        transition: all .3s ease-in-out;
-        &:hover{
-            opacity: 1;
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+    height: 30vw;
+    justify-content: center;
+
+    #container {
+        overflow-y: scroll;
+        display: block;
+        position: relative;
+        transition: ease-in-out all 0.5s;
+        transform: rotate(-90deg);
+        height: 100vw;
+        width: fit-content;
+        margin: -35vw auto;
+
+        .box {
+            transform: rotate(90deg);
+            width: 25vw;
+            height: 25vw;
+            border: 1px solid black;
+            border-radius: 2px;
+            background-color: rgb(77, 213, 255);
+            opacity: 0.7;
+            padding: 5px;
+            transition: all 0.3s ease-in-out;
+            margin: 20px;
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 }
-.button {
-    background-color: #f0b30d;
-    border-radius: 50%;
-    outline: none;
-    border: 0;
-    width: 60px;
-    height: 60px;
-    z-index: 20;
-    margin: auto;
-    justify-content: center;
-    opacity: 10%;
-    transition: all 0.5s ease-out;
-    &:hover {
-        opacity: 100%;
-    }
-}
-.forward {
-    grid-column: 3/4;
-}
-.back {
-    grid-column: 1/2;
-}
-
 // // for mobile
 // border: 1px solid black;
 //         border-right: 0px;
@@ -149,32 +122,28 @@ svg {
 
 // function to move postion left link graph on page to scroll
 @media screen and (max-width: 900px) {
-    .container {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        width: 90%;
-        .box {
-            width: 90%;
-            height: 46vh;
-            margin: auto;
-            justify-content: center;
+    .wholeContainer {
+        height: 100%;
+        width: 100%;
+        transform: rotate(90deg);
+        margin-top: 40vw;
+        #container {
+            height: 100%;
+            .box {
+                transform: rotate(0deg);
+                width: 89vw;
+                height: 89vw;
+                background: rgb(77, 213, 255);
+                opacity: 1;
+                border-radius: 7px;
+            }
         }
-    }
-    #container{
-        position: absolute;
-        right: 0px;
-        left: 0px;
     }
     header {
         margin-top: 10px;
         width: 75vw;
     }
-    .wholeContainer {
-        display: block;
-        button {
-            display: none;
-        }
-    }
+
     .graphs {
         display: none;
     }

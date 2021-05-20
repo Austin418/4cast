@@ -1699,13 +1699,11 @@ const info = {
 
 function slideForward(){
   $('#container').animate({
-    'right' : '100vw',
-    'marginRight' : 0
+    'marginRight' : '100vw'
   })
 }
 function slideBack(){
   $('#container').animate({
-    'right' : '0',
   })
 }
 
