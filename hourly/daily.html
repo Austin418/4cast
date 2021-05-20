@@ -17,33 +17,38 @@
 </head>
 
 <body id="main">
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <nav id="nav" class="navbar navbar-expand-lg text-white" style="background-color: rgba(0, 0, 0, 0.596);">
         <div class="container-fluid">
             <a class="navbar-brand m-auto m-lg-unset" href="../index.html">
                 <img src="../media/4CASTlogo.png" alt="">
-
+    
             </a>
-
-            <button class="navbar-toggler btn-outline-warning" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+    
+            <button class="navbar-toggler btn-outline-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span>
+                    <img src="../media/Windburger.png" style="width: 5vw; height: 4vw; margin: auto;" alt="">
+                </span>
             </button>
-
+    
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <h5 class="slogan">Forecast <strong><i>4</i></strong> You</h5>
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-
+    
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Now</a>
+                        <a class="nav-link text-warning" href="../index.html">Now</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../hourly/daily.html">Hourly</a>
+                        <a class="nav-link text-warning" href="#">Hourly</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Daily/hourly.html">Daily</a>
+                        <a class="nav-link text-warning" href="../Daily/hourly.html">Daily</a>
                     </li>
                 </ul>
+                <p class="nav-link" onclick="backgroundChange()">
+                    <img src="../media/switch.png" alt="" width="25px" height="25px">
+                </p>
                 <form class="d-flex">
                     <input class="form-control btn-outline-warning me-2" type="search"
                         placeholder="Search by City or Zip" aria-label="Search">
@@ -52,14 +57,14 @@
             </div>
         </div>
     </nav>
-<div class="bob">
-    <canvas class="chart" id="myChart" width="1781"  height="890"></canvas>
+    <div class="bob">
+        <canvas class="chart" id="myChart" width="1781" height="890"></canvas>
     </div>
-<script src="../node_modules/chart.js/dist/chart.js"></script>
+    <script src="../node_modules/chart.js/dist/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
     <script src="daily.js"></script>
-</body> 
+</body>
 
 </html>
