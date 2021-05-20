@@ -1,3 +1,5 @@
+
+
 const info = {
   lat: 33.53,
   lon: -112.18,
@@ -1707,175 +1709,96 @@ for (let hour of hourly) {
 }
 console.log(hrTemp)
 let hour = hourly.temp
-var ctx = document.getElementById('myChart').getContext('2d')
-var myChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24
-    ],
-    datasets: [
-      {
-        label: 'Temperature',
-        data: hrTemp,
-        tension: 0.1,
-        fill: false,
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)'
 
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)'
-
-        ],
-        borderWidth: 2
-      },
-      {
-        label: 'Humidity',
-        data: hrHumidity,
-        tension: 0.1,
-        fill: false,
-        backgroundColor: [
-
-          'rgba(54, 162, 235, 0.2)'
-
-        ],
-        borderColor: [
-
-          'rgba(54, 162, 235, 1)',
-
-        ],
-        borderWidth: 2
-      },
-      {
-        label: 'Feels Like',
-        data: hrFeelsLike,
-        backgroundColor: [
-            
-            'rgba(255, 206, 86, 0.2)'
-            
-        ],
-        borderColor: [
-            
-            'rgba(255, 206, 86, 1)'
-            
-        ],
-        borderWidth: 1
-    }
-    ]
-  },
-  options: {
-    layout: {
-      padding: 50
-    },
-    transitions: {
-      show: {
-        animations: {
-          x: {
-            from: 0
-          },
-          y: {
-            from: 0
-          }
-        }
-      },
-      hide: {
-        animations: {
-          x: {
-            to: 0
-          },
-          y: {
-            to: 0
-          }
-        }
-      }
-    }
-  }
-})
-
-const config = {
-  type: 'line',
-  data: data
-}
-
-const labels = Utils.months({ count: 7 })
-const data = {
-  labels: labels,
-  datasets: [
-    {
-      label: 'My First Dataset',
-      data: [65, 59, 80, 81, 56, 55, 40],
-      fill: false,
-      borderColor: 'rgb(75, 192, 192)',
-      tension: 0.1
-    }
-  ]
-}
-
-
-let i = 0
-function backgroundChange() {
-  i++
-  let main = document.getElementById('main')
-  if (i == 2) {
-    main.style.background = 'url(media/bigstock-Sun-Rays-On-Sunset-Sky-With-Bl-379334437.jpg)'
-    main.style.backgroundSize = "cover"
-    main.style.backgroundAttachment = 'fixed'
-    console.log(i)
-  }
-  if (i == 1) {
-    main.style.background = '#0dcaf0'
-    console.log(i)
-  }
-  if (i == 3 || i == 0) {
-    main.style.background = 'black'
-    i = 0
-    console.log(i)
-  }
-  console.log(i)
-}
-function slideBack(){
+function slideForward() {
   $('#container').animate({
-    'right' : '0',
-    'marginRight' : '20vw'
+    'right': '100vw',
+    'marginRight': 0
+  })
+}
+function slideBack() {
+  $('#container').animate({
+    'right': '0',
+    'marginRight': '20vw'
   })
 }
 
 let count = 1
+let tempdata = [1, 2, 3]
 
 
-for(day of daily){
+
+for (day of daily) {
 
   const HEAD = document.createElement("h1");
+  const HEAD1 = document.createElement("h1");
   const CNTER = document.getElementById("box" + count);
-  HEAD.innerHTML = day.temp.day;
+  HEAD.innerHTML = "Day: " + day.temp.day + String.fromCharCode(176);
+  HEAD1.innerHTML = "Night: " + day.temp.night + String.fromCharCode(176)
+  CNTER.setAttribute('day', day.temp.max)
+  CNTER.setAttribute('min', day.temp.min)
+  CNTER.setAttribute('feel', day.feels_like.day)
+  CNTER.setAttribute('uv', day.uvi)
+  CNTER.setAttribute('dew', day.dew_point)
+  CNTER.setAttribute('humid', day.humidity)
   console.log(day.temp.day)
   CNTER.appendChild(HEAD);
+  CNTER.appendChild(HEAD1);
+  CNTER.addEventListener('click', (e) => {
+    tempdata = []
+    console.log(e.target.getAttribute('day'))
+    tempdata.push(e.target.getAttribute('day'))
+    tempdata.push(e.target.getAttribute('min'))
+    tempdata.push(e.target.getAttribute('feel'))
+    tempdata.push(e.target.getAttribute('uv'))
+    tempdata.push(e.target.getAttribute('dew'))
+    tempdata.push(e.target.getAttribute('humid'))
+
+
+
+    $("canvas#myChart").remove();
+    $("div.graphContainer").append('<canvas class="chart animated fadeIn" id="myChart" width="400"  height="200"></canvas>');
+    var ctx = document.getElementById('myChart').getContext('2d')
+
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Highs', 'Lows', 'Feels Like', 'UVI', 'Dew Point', 'Humidity'],
+        datasets: [{
+          label: 'Temperatures',
+          data: tempdata,
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    myChart.clear();
+    console.log(tempdata)
+  })
   count++
-  
+
 }
-
-
