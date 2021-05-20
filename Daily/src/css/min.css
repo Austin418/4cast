@@ -115,11 +115,13 @@ svg {
   position: absolute;
   padding: 0px;
   right: auto;
+  -webkit-transition: ease-in-out all .5s;
+  transition: ease-in-out all .5s;
 }
 
 .container .box {
-  width: 17vw;
-  height: 17vw;
+  width: 20vw;
+  height: 20vw;
   border: 1px solid black;
   padding: 0;
   border-radius: 2px;
