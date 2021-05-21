@@ -1720,28 +1720,26 @@ const P17 = document.createElement("p");
 const P18 = document.createElement("p");
 const P19 = document.createElement("p");
 const P20 = document.createElement("p");
-P.innerHTML = "Latitude " + lat + "<br>";
-P1.innerHTML = "Longitude " + lon + "<br>";
-P2.innerHTML = "Timezone " + timezone + "<br>";
-P3.innerHTML = "Timezone Offset " + timezone_offset + "<br>";
+
+P2.innerHTML = "<h2>Timezone</h2> <center><hr style = 'color: white; height: 2px; width: 15vw;'></center>" + timezone + "<center><hr style = 'color: white; height: 2px; width: 15vw;'></center>";
+P3.innerHTML = "<br> <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.7617990918293!2d-112.18221762220061!3d33.53002302732612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDMxJzQ4LjAiTiAxMTLCsDEwJzQ4LjAiVw!5e0!3m2!1sen!2sus!4v1621631810802!5m2!1sen!2sus' width='fit-content' height='fit-content' style='border:0; margin: auto;' allowfullscreen='' loading='lazy'></iframe>";
 
 
 P7.innerHTML = `${current.temp}${String.fromCharCode(176)} F <br>`;
-P8.innerHTML = `Feels Like: ${current.feels_like}${String.fromCharCode(176)} F`
-P9.innerHTML = "<h4>Pressure</h4> <center><hr style = 'color: white; height: 1px; width: 15vw;'></center>" + current.pressure + "<center><hr style = 'color: white; height: 1px; width: 15vw;'></center>";
-P10.innerHTML = "<h4>Humidity</h4> <center><hr style = 'color: white; height: 1px; width: 15vw;'></center> " + current.humidity + "<center><hr style = 'color: white; height: 1px; width: 15vw;'></center>";
+P8.innerHTML = `<h3>Feels Like: ${current.feels_like}${String.fromCharCode(176)} F</h3>`
+P9.innerHTML = "<h2>Pressure</h3> <center><hr style = 'color: white; height: 2px; width: 15vw;'></center>" + "<p style = 'color: greenyellow;'>NORMAL</p>" + "<center><hr style = 'color: white; height: 2px; width: 15vw;'></center>";
+P10.innerHTML = "<h2>Humidity</h3> <center><hr style = 'color: white; height: 2px; width: 15vw;'></center> " + current.humidity + "%<center><hr style = 'color: white; height: 2px; width: 15vw;'></center>";
 
-P12.innerHTML = "UVI: " + current.uvi + "<br>";
-P13.innerHTML = "Clouds: " + current.clouds + "<br>";
-P14.innerHTML = "Visibility: " + current.visibility + "<br>";
-P15.innerHTML = "Wind Speed: " + current.wind_speed + " mph" + "<br>";
-P16.innerHTML = "Wind Degree: " + current.wind_deg + String.fromCharCode(176) + "<br>";
+P12.innerHTML = "<h2>UVI</h2> <center><hr style = 'color: white; height: 2px; width: 15vw;'></center>" + "<p style = 'color: greenyellow;'>LOW</p>" + "<center><hr style = 'color: white; height: 2px; width: 15vw;'></center>";
 
 
+P15.innerHTML = "<h2>Wind Speed</h2> <center><hr style = 'color: white; height: 2px; width: 15vw;'></center>" + current.wind_speed + " mph" + "<center><hr style = 'color: white; height: 2px; width: 15vw;'></center>";
+P16.innerHTML = "<h2>Wind Degree</h2> <center><hr style = 'color: white; height: 2px; width: 15vw;'></center>" + current.wind_deg + String.fromCharCode(176) + " SW <center><hr style = 'color: white; height: 2px; width: 15vw;'></center>";
 
 
-CNTER.appendChild(P);
-CNTER.appendChild(P1);
+
+
+
 CNTER.appendChild(P2);
 CNTER.appendChild(P3);
 CNTER.appendChild(P4);
@@ -1753,8 +1751,7 @@ CNTER1.appendChild(P9);
 CNTER1.appendChild(P10);
 
 CNTER2.appendChild(P12);
-CNTER2.appendChild(P13);
-CNTER2.appendChild(P14);
+
 CNTER2.appendChild(P15);
 CNTER2.appendChild(P16);
 CNTER.appendChild(P17);
