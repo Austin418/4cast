@@ -3,6 +3,9 @@ html {
   height: 100%;
 }
 
+::-webkit-scrollbar{
+  background-color: rgba(0, 0, 0, 0);
+}
 body {
   background: url(../../../media/bigstock-Sun-Rays-On-Sunset-Sky-With-Bl-379334437.jpg);
   background-attachment: fixed;
@@ -79,13 +82,7 @@ h1 {
   margin: auto;
 }
 
-::-webkit-scrollbar {
-  color: transparent;
-}
 
-::-webkit-scrollbar-thumb {
-  color: grey;
-}
 
 .wholeContainer {
   display: -webkit-box;

@@ -1734,9 +1734,9 @@ for (day of daily) {
   const HEAD3 = document.createElement("h1");
   const CNTER = document.getElementById("box" + count);
   const CNTER2 = document.getElementById("hbox" + count);
-  HEAD.innerHTML = "Day: " + day.temp.day + String.fromCharCode(176);
-  HEAD1.innerHTML = "Night: " + day.temp.night + String.fromCharCode(176)
-  HEAD2.innerHTML = "High: " + day.temp.max + String.fromCharCode(176)
+  HEAD.innerHTML = `<img width="45px" height="45px" src='../media/sun.png'>` + day.temp.day + String.fromCharCode(176);
+  HEAD1.innerHTML = `<img width="45px" height="45px" src='../media/moon.png'>`  + day.temp.night + String.fromCharCode(176)
+  HEAD2.innerHTML = "Highs: " + day.temp.max + String.fromCharCode(176)
   HEAD3.innerHTML = "Lows: " + day.temp.min + String.fromCharCode(176)
   CNTER.setAttribute('day', day.temp.max)
   CNTER.setAttribute('min', day.temp.min)
