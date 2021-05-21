@@ -1728,8 +1728,8 @@ P3.innerHTML = "Timezone Offset " + timezone_offset + "<br>";
 
 P7.innerHTML = `${current.temp}${String.fromCharCode(176)} F <br>`;
 P8.innerHTML = `Feels Like: ${current.feels_like}${String.fromCharCode(176)} F`
-P9.innerHTML = "<h4>Pressure</h4> <center><hr style = 'color: white; height: 1px;'></center>" + current.pressure + "<center><hr style = 'color: white; height: 1px;'></center>";
-P10.innerHTML = "<h4>Humidity</h4> <center><hr style = 'color: white; height: 1px;'></center> " + current.humidity + "<center><hr style = 'color: white; height: 1px;'></center>";
+P9.innerHTML = "<h4>Pressure</h4> <center><hr style = 'color: white; height: 1px; width: 15vw;'></center>" + current.pressure + "<center><hr style = 'color: white; height: 1px; width: 15vw;'></center>";
+P10.innerHTML = "<h4>Humidity</h4> <center><hr style = 'color: white; height: 1px; width: 15vw;'></center> " + current.humidity + "<center><hr style = 'color: white; height: 1px; width: 15vw;'></center>";
 
 P12.innerHTML = "UVI: " + current.uvi + "<br>";
 P13.innerHTML = "Clouds: " + current.clouds + "<br>";
