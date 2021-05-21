@@ -88,16 +88,6 @@ h1 {
 }
 
 .wholeContainer {
-<<<<<<< HEAD
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 30vw;
-=======
   display: -ms-grid;
   display: grid;
   width: 100vw;
@@ -153,7 +143,6 @@ h1 {
   height: 60px;
   z-index: 20;
   margin: auto;
->>>>>>> 99894d584a8d534e9ffc98ed07cfa3a5072c72dc
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
