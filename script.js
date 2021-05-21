@@ -1728,9 +1728,9 @@ P3.innerHTML = "Timezone Offset " + timezone_offset + "<br>";
 
 P7.innerHTML = `${current.temp}${String.fromCharCode(176)} F <br>`;
 P8.innerHTML = `Feels Like: ${current.feels_like}${String.fromCharCode(176)} F`
-P9.innerHTML = "Pressure: " + current.pressure + "<br>";
-P10.innerHTML = "Humidity: " + current.humidity + "<br>";
-P11.innerHTML = "Dew Point: " + current.dew_point + "<br>";
+P9.innerHTML = "<h4>Pressure</h4> <center><hr style = 'color: white; height: 1px;'></center>" + current.pressure + "<center><hr style = 'color: white; height: 1px;'></center>";
+P10.innerHTML = "<h4>Humidity</h4> <center><hr style = 'color: white; height: 1px;'></center> " + current.humidity + "<center><hr style = 'color: white; height: 1px;'></center>";
+
 P12.innerHTML = "UVI: " + current.uvi + "<br>";
 P13.innerHTML = "Clouds: " + current.clouds + "<br>";
 P14.innerHTML = "Visibility: " + current.visibility + "<br>";
@@ -1738,7 +1738,7 @@ P15.innerHTML = "Wind Speed: " + current.wind_speed + " mph" + "<br>";
 P16.innerHTML = "Wind Degree: " + current.wind_deg + String.fromCharCode(176) + "<br>";
 
 
-P19.innerHTML = "Description: " + current.weather.description + "<br>";
+
 
 CNTER.appendChild(P);
 CNTER.appendChild(P1);
@@ -1751,7 +1751,7 @@ CNTER1.appendChild(P7);
 CNTER1.appendChild(P8);
 CNTER1.appendChild(P9);
 CNTER1.appendChild(P10);
-CNTER1.appendChild(P11);
+
 CNTER2.appendChild(P12);
 CNTER2.appendChild(P13);
 CNTER2.appendChild(P14);
@@ -1759,7 +1759,7 @@ CNTER2.appendChild(P15);
 CNTER2.appendChild(P16);
 CNTER.appendChild(P17);
 CNTER.appendChild(P18);
-CNTER1.appendChild(P19);
+
 CNTER.appendChild(P20);
 
 
