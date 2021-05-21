@@ -46,6 +46,6 @@ May 20th
 	John: Worked on the current/landing page to make it look nice
 
 May 21th 
-    Zach : 
-    Austin : 
-    John : 
+    Zach : Worked on renameing the files and some renameing on the graphs 
+    Austin : Worked on the daily for responsive 
+    John : Worked on the look of the currect/landing page and the background of the hourly page
