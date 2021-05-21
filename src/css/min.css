@@ -1,6 +1,6 @@
 html {
+  width: 100%;
   height: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -79,114 +79,71 @@ h1 {
   margin: auto;
 }
 
-svg {
-  align-self: center;
-  width: 30px;
-  height: 30px;
+::-webkit-scrollbar {
+  color: transparent;
 }
 
-.card {
-  margin: 0, 0, 0, 0;
+::-webkit-scrollbar-thumb {
+  color: grey;
 }
 
 .wholeContainer {
-  display: grid;
-  width: 100vw;
-  grid-template-columns: 75px auto 75px;
-  grid-template-rows: 17vw;
-  margin: 25px 0;
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
+  height: 30vw;
+  justify-content: center;
 }
 
-.container {
-  overflow: visible;
-  grid-column: 2/3;
-  display: grid;
-<<<<<<< HEAD
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
-=======
-  -ms-grid-columns: auto auto auto auto auto auto auto auto auto auto;
-      grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
->>>>>>> 99894d584a8d534e9ffc98ed07cfa3a5072c72dc
-  gap: 20px;
-  position: absolute;
-  padding: 0px;
-  right: auto;
-  -webkit-transition: ease-in-out all .5s;
-  transition: ease-in-out all .5s;
+.wholeContainer #container {
+  overflow-y: scroll;
+  display: block;
+  position: relative;
+  transition: ease-in-out all 0.5s;
+  transform: rotate(-90deg);
+  height: 100vw;
+  width: fit-content;
+  margin: -35vw auto;
 }
 
-.container .box {
-  width: 20vw;
-  height: 20vw;
+.wholeContainer #container .box {
+  transform: rotate(90deg);
+  width: 25vw;
+  height: 25vw;
   border: 1px solid black;
-  padding: 0;
   border-radius: 2px;
   background-color: #4dd5ff;
-  opacity: .7;
-  padding: 10px;
-<<<<<<< HEAD
-=======
-  -webkit-transition: all .3s ease-in-out;
->>>>>>> 99894d584a8d534e9ffc98ed07cfa3a5072c72dc
-  transition: all .3s ease-in-out;
+  opacity: 0.7;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+  margin: 20px;
 }
 
-.container .box:hover {
+.wholeContainer #container .box:hover {
   opacity: 1;
 }
 
-.button {
-  background-color: #f0b30d;
-  border-radius: 50%;
-  outline: none;
-  border: 0;
-  width: 60px;
-  height: 60px;
-  z-index: 20;
-  margin: auto;
-  justify-content: center;
-  opacity: 10%;
-  transition: all 0.5s ease-out;
-}
-
-.button:hover {
-  opacity: 100%;
-}
-
-.forward {
-  grid-column: 3/4;
-}
-
-.back {
-  grid-column: 1/2;
-}
-
 @media screen and (max-width: 900px) {
-  .container {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    width: 90%;
+  .wholeContainer {
+    height: 100%;
+    width: 100%;
+    transform: rotate(90deg);
+    margin-top: 40vw;
   }
-  .container .box {
-    width: 90%;
-    height: 46vh;
-    margin: auto;
-    justify-content: center;
+  .wholeContainer #container {
+    height: 100%;
   }
-  #container {
-    position: absolute;
-    right: 0px;
-    left: 0px;
+  .wholeContainer #container .box {
+    transform: rotate(0deg);
+    width: 89vw;
+    height: 89vw;
+    background: #4dd5ff;
+    opacity: 1;
+    border-radius: 7px;
   }
   header {
     margin-top: 10px;
     width: 75vw;
-  }
-  .wholeContainer {
-    display: block;
-  }
-  .wholeContainer button {
-    display: none;
   }
   .graphs {
     display: none;
@@ -198,7 +155,6 @@ svg {
   margin: 40px;
   padding: 10px;
   border-radius: 5px;
-  -webkit-box-shadow: 10px 15px black;
-          box-shadow: 10px 15px black;
+  box-shadow: 10px 15px black;
 }
 /*# sourceMappingURL=min.css.map */

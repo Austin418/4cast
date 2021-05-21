@@ -1768,9 +1768,9 @@ for (day of daily) {
     var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ['Highs', 'Lows', 'Feels Like', 'UVI', 'Dew Point', 'Humidity'],
+        labels: ['High Temperature', 'Low Temperature', 'Feels Like', 'UVI', 'Dew Point', 'Humidity'],
         datasets: [{
-          label: 'Temperatures',
+          label: '',
           data: tempdata,
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
