@@ -1736,7 +1736,7 @@ for (day of daily) {
   const CNTER2 = document.getElementById("hbox" + count);
   HEAD.innerHTML = "Day: " + day.temp.day + String.fromCharCode(176);
   HEAD1.innerHTML = "Night: " + day.temp.night + String.fromCharCode(176)
-  HEAD2.innerHTML = "Highs: " + day.temp.max + String.fromCharCode(176)
+  HEAD2.innerHTML = "High: " + day.temp.max + String.fromCharCode(176)
   HEAD3.innerHTML = "Lows: " + day.temp.min + String.fromCharCode(176)
   CNTER.setAttribute('day', day.temp.max)
   CNTER.setAttribute('min', day.temp.min)
@@ -1768,9 +1768,9 @@ for (day of daily) {
     var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ['Highs', 'Lows', 'Feels Like', 'UVI', 'Dew Point', 'Humidity'],
+        labels: ['High Temperature', 'Low Temperature', 'Feels Like', 'UVI', 'Dew Point', 'Humidity'],
         datasets: [{
-          label: 'Temperatures',
+          label: '',
           data: tempdata,
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
