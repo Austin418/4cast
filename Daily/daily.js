@@ -1694,6 +1694,8 @@ const info = {
   ]
 }
 
+alert("Click box to view weather data")
+
 let hrTemp = []
 let hrHumidity = [];
 let hrFeelsLike = [];
@@ -1770,7 +1772,7 @@ for (day of daily) {
       data: {
         labels: ['High Temperature', 'Low Temperature', 'Feels Like', 'UVI', 'Dew Point', 'Humidity'],
         datasets: [{
-          label: '',
+          label: 'Weather Data',
           data: tempdata,
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',

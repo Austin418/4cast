@@ -4,8 +4,9 @@ html {
 }
 
 body {
-  background: url(../../../media/sunset-sky-1464251934sde.jpg);
+  background: url(../../../media/bigstock-Sun-Rays-On-Sunset-Sky-With-Bl-379334437.jpg);
   background-attachment: fixed;
+  background-position: center;
 }
 
 header {
@@ -211,6 +212,8 @@ svg {
   box-shadow: 10px 15px black;
   
 }
+
+
 
 
 
