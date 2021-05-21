@@ -1,6 +1,7 @@
 html {
   width: 100%;
   height: 100%;
+  font-family: 'Newsreader', serif;
 }
 
 body {
@@ -8,6 +9,8 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 header {
@@ -80,11 +83,7 @@ h1 {
 }
 
 ::-webkit-scrollbar {
-  color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  color: grey;
+  width: 0;
 }
 
 .wholeContainer {
@@ -122,13 +121,40 @@ h1 {
   width: 25vw;
   height: 25vw;
   border: 1px solid black;
-  border-radius: 2px;
+  border-radius: 5px;
   background-color: #4dd5ff;
   opacity: 0.7;
   padding: 5px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   margin: 20px;
+  font-size: 4vw;
+  color: #ffbb3c;
+  text-shadow: white 1px 1px 1px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  font-family: 'Newsreader', serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wholeContainer #container .box h1 {
+  color: black;
+  text-shadow: blanchedalmond 1px 1px;
+  font-size: 2.5vw;
+  text-align: start;
+  margin-left: 1vw;
+  font-family: var(--bs-font-sans-serif);
+  font-weight: 400;
 }
 
 .wholeContainer #container .box:hover {
@@ -142,28 +168,34 @@ h1 {
   }
   .wholeContainer {
     height: 100%;
-    width: 100%;
+    width: 100vw;
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
-    margin-top: 40vw;
+    margin-top: 35vw;
   }
   .wholeContainer #container {
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
   }
   .wholeContainer #container .box {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
-    width: 89vw;
-    height: 89vw;
+    width: 92.5vw;
+    height: 92.5vw;
     background: #4dd5ff;
     opacity: 1;
     border-radius: 7px;
+    font-size: 14vw;
+  }
+  .wholeContainer #container .box h1 {
+    font-size: 11vw;
+    text-shadow: none;
   }
   header {
     margin-top: 10px;
     width: 75vw;
   }
-  .graphs {
+  .graphContainer {
     display: none;
   }
 }

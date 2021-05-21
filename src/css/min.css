@@ -88,37 +88,26 @@ h1 {
 }
 
 .wholeContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   height: 30vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .wholeContainer #container {
   overflow-y: scroll;
   display: block;
   position: relative;
-  -webkit-transition: ease-in-out all 0.5s;
   transition: ease-in-out all 0.5s;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
   height: 100vw;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   margin: -35vw auto;
 }
 
 .wholeContainer #container .box {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
   width: 25vw;
   height: 25vw;
   border: 1px solid black;
@@ -126,7 +115,6 @@ h1 {
   background-color: #4dd5ff;
   opacity: 0.7;
   padding: 5px;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   margin: 20px;
 }
@@ -139,16 +127,14 @@ h1 {
   .wholeContainer {
     height: 100%;
     width: 100%;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
     margin-top: 40vw;
   }
   .wholeContainer #container {
     height: 100%;
   }
   .wholeContainer #container .box {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     width: 89vw;
     height: 89vw;
     background: #4dd5ff;
@@ -169,7 +155,6 @@ h1 {
   margin: 40px;
   padding: 10px;
   border-radius: 5px;
-  -webkit-box-shadow: 10px 15px black;
-          box-shadow: 10px 15px black;
+  box-shadow: 10px 15px black;
 }
 /*# sourceMappingURL=min.css.map */
